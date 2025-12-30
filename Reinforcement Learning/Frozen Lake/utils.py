@@ -134,10 +134,10 @@ class Lake:
 
             t+=1
             d = np.max(deltas)
-            if (d<=delta):
+            if (d<=treshold):
                 print(f'Convergence reached')
                 break
-            if (t >= iterations):
+            if (t >= max_iterations):
                 print(f'Max number of iterations reached.')        
             break
 
@@ -180,7 +180,7 @@ class Lake:
                                     p_safe = sum([n.Type in ["F","S"] for n in next_neighbours])/4
                                     values.append(p_safe*(neighbour.reward + gamma*neighbour.value) + (1-p_safe)*(hole_reward))
                                 else:
-                                    raise Exception(f'{ennvironment} environment not recognized.')
+                                    raise Exception(f'{env} environment not recognized.')
                                 
                             else:
                                 values.append(neighbour.reward)
