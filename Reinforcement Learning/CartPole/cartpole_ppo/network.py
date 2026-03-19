@@ -1,5 +1,6 @@
 import numpy as np
-from utils.utils import Optimizer
+from optimizer import Optimizer
+
 class NeuralNetwork:
     def __init__(self, network_info, optimizer_info,name):
         self.w = {}
