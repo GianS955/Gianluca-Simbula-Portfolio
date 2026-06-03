@@ -1,0 +1,20 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Model weights
+*.pt
+*.pth
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Episode GIFs (except the demo)
+assets/episode_*.gif
+
+# Misc
+.vscode/
+*.swp
