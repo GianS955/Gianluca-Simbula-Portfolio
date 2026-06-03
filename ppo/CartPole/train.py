@@ -1,11 +1,11 @@
 import math
-from cartpole_ppo.agent import A2CAgent
+from agent import A2CAgent
 import numpy as np
 import gymnasium as gym
 import copy
 from tqdm import tqdm
 import matplotlib.pyplot as plt
-from cartpole_ppo.utils import record_agent, moving_average
+from utils import record_agent, moving_average
 import random
 
 def run_episode(agent_params, actor_network_info, critic_network_info, optimizer_params, experiment_params, max_episodes, seed, environment = 'CartPole-v1'):
