@@ -1,0 +1,38 @@
+{
+    "actor": {
+        "hidden_shapes": [
+            256,
+            256,
+            256
+        ],
+        "input_shape": 28,
+        "learning_rate": 3E-05,
+        "output_shape": 4
+    },
+    "critic": {
+        "hidden_shapes": [
+            256,
+            256,
+            256
+        ],
+        "input_shape": 32,
+        "learning_rate": 3E-05,
+        "output_shape": 1,
+        "tau": 0.001
+    },
+    "log_alpha": {
+        "learning_rate": 3E-05,
+        "target_entropy": -4
+    },
+    "training": {
+        "batch_size": 1024,
+        "evaluation_steps": 50,
+        "gamma": 0.99,
+        "her_ratio": 4,
+        "improvement_buffer_size": 10,
+        "improvement_ratio": 1E-06,
+        "learning_starts": 10000,
+        "patience": 40,
+        "replay_buffer_size": 1000000
+    }
+}
