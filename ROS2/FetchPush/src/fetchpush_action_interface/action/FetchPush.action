@@ -1,0 +1,7 @@
+float32[3] desired_goal
+---
+bool success
+int32 total_steps
+---
+float32 distance
+int32 current_step

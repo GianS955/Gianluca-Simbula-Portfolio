@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="model_path" default="/home/gianluca/projects/fetchpush_sac/actor_traced.pt"/>
+  
+  <node pkg="fetchpush_action" exec="fetchpush_server" name="action_server" namespace="fetchpush">
+	<param name="model_path" value="$(var model_path)"/>
+  </node>
+  <node pkg="fetchpush_env" exec="env_node" name="environment" namespace="fetchpush">
+	<param name="output_path" value = "/home/gianluca/projects/fetchpush_sac"/>
+  </node>
+</launch>
